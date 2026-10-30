@@ -21,8 +21,8 @@
         "cells": [
           {
             "position": {
-              "x": 280,
-              "y": 390
+              "x": 370,
+              "y": 360
             },
             "size": {
               "width": 112.5,
@@ -149,7 +149,6 @@
               "isTrustBoundary": true,
               "hasOpenThreats": false,
               "crossingFlows": [
-                "2022e09e-cc0c-48d9-9c81-8513bb3b2988",
                 "19d95ab7-f012-4444-a188-aae4907259e8"
               ],
               "containedElements": [
@@ -163,24 +162,24 @@
             ],
             "id": "d6b375ed-0f63-4b2e-88cb-da5d06bf73bf",
             "source": {
-              "x": 480,
+              "x": 570,
               "y": 800
             },
             "target": {
-              "x": 1040,
-              "y": 480
+              "x": 1290,
+              "y": 460
             },
             "vertices": [
               {
-                "x": 670,
+                "x": 760,
                 "y": 480
               }
             ]
           },
           {
             "position": {
-              "x": 276.25,
-              "y": 216
+              "x": 20,
+              "y": 360
             },
             "size": {
               "width": 120,
@@ -188,7 +187,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Logs de Atualização"
+                "text": "Dados do Usuário"
               },
               "topLine": {
                 "strokeWidth": 1.5,
@@ -287,7 +286,7 @@
             "id": "ed55f8aa-ace4-4124-8fa3-8d76894d9557",
             "data": {
               "type": "tm.Store",
-              "name": "Logs de Atualização",
+              "name": "Dados do Usuário",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -296,57 +295,10 @@
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
-              "storesCredentials": false,
+              "storesCredentials": true,
               "storesInventory": false,
               "threats": []
             }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Data Flow"
-            ],
-            "id": "a1e88b0a-cfd0-4cfe-a7bb-61cefe42c283",
-            "source": {
-              "cell": "16a7271e-e4e7-49d4-b39f-c7cbf141fffa",
-              "port": "fe4ce9d3-26be-4548-ae07-a850686cdf73"
-            },
-            "target": {
-              "cell": "ed55f8aa-ace4-4124-8fa3-8d76894d9557",
-              "port": "c8dd508c-8019-4c0e-a1b8-2d3e21f8d4d6"
-            },
-            "vertices": []
           },
           {
             "shape": "flow",
@@ -415,7 +367,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Obter Patch",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -429,7 +381,7 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Data Flow"
+              "Obter Patch"
             ],
             "id": "21b3377c-8180-4379-b39c-723fef061787",
             "source": {
@@ -462,7 +414,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Insert Mudanças",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -476,7 +428,7 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Data Flow"
+              "Insert Mudanças"
             ],
             "id": "9976f396-e133-431b-b3af-285ba75ba6fa",
             "source": {
@@ -489,7 +441,7 @@
             },
             "vertices": [
               {
-                "x": 900,
+                "x": 990,
                 "y": 630
               }
             ]
@@ -514,7 +466,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Verificação de Versão",
+              "name": "Data Flow",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -525,26 +477,277 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Data Flow"
+            ],
+            "id": "97ed1edf-8d3a-4b69-bb75-96956477bf16",
+            "source": {
+              "cell": "cbe7ddf7-a83a-4021-b4b2-1c0baa06177a",
+              "port": "766085f6-e9e7-44e7-860f-23e80c64bee2"
+            },
+            "target": {
+              "cell": "865124d8-14e7-41a0-87b2-80d7c1e14e7e",
+              "port": "e71b213f-33e2-4768-b5dd-965d9406d09f"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Dados do Jogo",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Dados do Jogo"
+            ],
+            "id": "50ebf7d6-a9c7-4788-854c-67fe7fe596dc",
+            "source": {
+              "cell": "865124d8-14e7-41a0-87b2-80d7c1e14e7e",
+              "port": "e71b213f-33e2-4768-b5dd-965d9406d09f"
+            },
+            "target": {
+              "cell": "cbe7ddf7-a83a-4021-b4b2-1c0baa06177a",
+              "port": "766085f6-e9e7-44e7-860f-23e80c64bee2"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Inicialização",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Inicialização"
+            ],
+            "id": "91bfe99d-6bc9-4b28-a338-ffde9cbdc26e",
+            "source": {
+              "cell": "16a7271e-e4e7-49d4-b39f-c7cbf141fffa",
+              "port": "9247d365-7ae4-45e5-aad7-681b205b3e1f"
+            },
+            "target": {
+              "cell": "75509df3-29be-4da4-a15b-25c840ab9645",
+              "port": "69b7faa4-de7a-4b23-9025-b302f6a50f90"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Download de Atualizações",
+              "description": "ARIA HTTP",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
               "trustBoundaryIds": [
                 "d6b375ed-0f63-4b2e-88cb-da5d06bf73bf"
               ]
             },
             "labels": [
-              "Verificação de Versão"
+              "Download de Atualizações"
             ],
-            "id": "2022e09e-cc0c-48d9-9c81-8513bb3b2988",
+            "id": "19d95ab7-f012-4444-a188-aae4907259e8",
             "source": {
-              "cell": "16a7271e-e4e7-49d4-b39f-c7cbf141fffa",
-              "port": "ac9a112d-a9b9-4c14-b804-bb5c9a7285cd"
-            },
-            "target": {
               "cell": "fc830a36-1016-40be-b13a-117358a70146",
               "port": "c24a59ce-b3dd-4bde-bc1c-e4989f8cb1c3"
             },
+            "target": {
+              "cell": "16a7271e-e4e7-49d4-b39f-c7cbf141fffa",
+              "port": "ac9a112d-a9b9-4c14-b804-bb5c9a7285cd"
+            },
             "vertices": [
               {
-                "x": 400,
-                "y": 560
+                "x": 620,
+                "y": 540
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Dados de Login",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Dados de Login"
+            ],
+            "id": "a1e88b0a-cfd0-4cfe-a7bb-61cefe42c283",
+            "source": {
+              "cell": "16a7271e-e4e7-49d4-b39f-c7cbf141fffa",
+              "port": "08cc60f8-f0fa-4e48-a510-72debc27b662"
+            },
+            "target": {
+              "cell": "ed55f8aa-ace4-4124-8fa3-8d76894d9557",
+              "port": "d568e8aa-e4a7-49b7-9999-9b25c970d048"
+            },
+            "vertices": [
+              {
+                "x": 300,
+                "y": 390
+              },
+              {
+                "x": 280,
+                "y": 390
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Autenticação do Square ENIX",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "bb6640ad-6a31-49d2-86d7-7f9e4d7fee79"
+              ]
+            },
+            "labels": [
+              "Autenticação do Square ENIX"
+            ],
+            "id": "9e14ff99-3fba-422c-97a5-d53c77f9ef50",
+            "source": {
+              "cell": "16a7271e-e4e7-49d4-b39f-c7cbf141fffa",
+              "port": "fe4ce9d3-26be-4548-ae07-a850686cdf73"
+            },
+            "target": {
+              "cell": "09ce8ec0-af7d-4055-9c16-19a7dd7ce5e1",
+              "port": "95dd1200-9000-447b-8379-40f0ed9a70b6"
+            },
+            "vertices": [
+              {
+                "x": 510,
+                "y": 180
               }
             ]
           },
@@ -568,7 +771,162 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Atualizações",
+              "name": "Tentativa de Login",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Tentativa de Login"
+            ],
+            "id": "8c896953-8a32-4292-9015-ddf8260e18d9",
+            "source": {
+              "cell": "09ce8ec0-af7d-4055-9c16-19a7dd7ce5e1",
+              "port": "766085f6-e9e7-44e7-860f-23e80c64bee2"
+            },
+            "target": {
+              "cell": "14aa4677-be3b-4d15-8c1e-23a35ae6c589",
+              "port": "e12c60ac-71aa-4fd8-8e4a-8b5235c03c80"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Conexão ao Jogo",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Conexão ao Jogo"
+            ],
+            "id": "fca7d035-30b3-4341-ab8d-ad0a9b30026b",
+            "source": {
+              "cell": "cbe7ddf7-a83a-4021-b4b2-1c0baa06177a",
+              "port": "d38bd3a2-e52e-4ba9-b4c8-df79f88e45c0"
+            },
+            "target": {
+              "cell": "75509df3-29be-4da4-a15b-25c840ab9645",
+              "port": "b01a8a67-d75a-4e7a-a4ca-1d65ad300aeb"
+            },
+            "vertices": [
+              {
+                "x": 1240,
+                "y": 370
+              },
+              {
+                "x": 1090,
+                "y": 390
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Data Flow"
+            ],
+            "id": "2744fb61-27d3-4bbd-8223-59f641f02a81",
+            "source": {
+              "cell": "09ce8ec0-af7d-4055-9c16-19a7dd7ce5e1",
+              "port": "d38bd3a2-e52e-4ba9-b4c8-df79f88e45c0"
+            },
+            "target": {
+              "cell": "805eabeb-4498-47c8-83ca-a88399d6ba69",
+              "port": "e12c60ac-71aa-4fd8-8e4a-8b5235c03c80"
+            },
+            "vertices": [
+              {
+                "x": 710,
+                "y": 210
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Conexão e Desconexão",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -580,31 +938,83 @@
               "protocol": "",
               "threats": [],
               "trustBoundaryIds": [
-                "d6b375ed-0f63-4b2e-88cb-da5d06bf73bf"
+                "bb6640ad-6a31-49d2-86d7-7f9e4d7fee79"
               ]
             },
             "labels": [
-              "Atualizações"
+              "Conexão e Desconexão"
             ],
-            "id": "19d95ab7-f012-4444-a188-aae4907259e8",
+            "id": "65d0d664-1271-4383-8680-8b228e5a9a4a",
             "source": {
-              "cell": "fc830a36-1016-40be-b13a-117358a70146",
-              "port": "3c6f511b-0826-4ec0-bd8c-82552bf7fa30"
+              "cell": "cbe7ddf7-a83a-4021-b4b2-1c0baa06177a",
+              "port": "ed40b42d-5c53-4783-b704-5c0ea5f1a2a0"
             },
             "target": {
-              "cell": "16a7271e-e4e7-49d4-b39f-c7cbf141fffa",
-              "port": "ac9a112d-a9b9-4c14-b804-bb5c9a7285cd"
+              "cell": "14aa4677-be3b-4d15-8c1e-23a35ae6c589",
+              "port": "6317a2b1-14f8-45a7-bca7-54613343d194"
             },
             "vertices": [
               {
-                "x": 500,
-                "y": 510
+                "x": 1250,
+                "y": 110
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Autenticação Steam",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Autenticação Steam"
+            ],
+            "id": "41150be2-e668-43f8-956c-6d66f8e805f9",
+            "source": {
+              "cell": "16a7271e-e4e7-49d4-b39f-c7cbf141fffa",
+              "port": "fe4ce9d3-26be-4548-ae07-a850686cdf73"
+            },
+            "target": {
+              "cell": "f4bddc25-880a-4d33-a7ae-62df3ae5a661",
+              "port": "62f7ad58-e0fc-4bf3-9666-d188dacc4c72"
+            },
+            "vertices": [
+              {
+                "x": 360,
+                "y": 210
               }
             ]
           },
           {
             "position": {
-              "x": 666.25,
+              "x": 756.25,
               "y": 740
             },
             "size": {
@@ -720,7 +1130,7 @@
               "hasOpenThreats": false,
               "isALog": false,
               "isEncrypted": false,
-              "isSigned": false,
+              "isSigned": true,
               "storesCredentials": false,
               "storesInventory": false,
               "threats": []
@@ -728,7 +1138,7 @@
           },
           {
             "position": {
-              "x": 676.25,
+              "x": 766.25,
               "y": 535
             },
             "size": {
@@ -848,7 +1258,7 @@
           },
           {
             "position": {
-              "x": 870,
+              "x": 960,
               "y": 740
             },
             "size": {
@@ -962,7 +1372,7 @@
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
-              "isALog": false,
+              "isALog": true,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
@@ -971,45 +1381,9 @@
             }
           },
           {
-            "shape": "trust-boundary-curve",
-            "width": 200,
-            "height": 100,
-            "zIndex": 15,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Boundary",
-              "name": "Servidor do jogo",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false,
-              "crossingFlows": [],
-              "containedElements": [
-                "cbe7ddf7-a83a-4021-b4b2-1c0baa06177a"
-              ]
-            },
-            "labels": [
-              "Servidor do jogo"
-            ],
-            "id": "bb6640ad-6a31-49d2-86d7-7f9e4d7fee79",
-            "source": {
-              "x": 470,
-              "y": 150
-            },
-            "target": {
-              "x": 900,
-              "y": 320
-            },
-            "vertices": [
-              {
-                "x": 630,
-                "y": 300
-              }
-            ]
-          },
-          {
             "position": {
-              "x": 576.25,
-              "y": 90
+              "x": 641.25,
+              "y": 41
             },
             "size": {
               "width": 90,
@@ -1017,7 +1391,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Serviço de\nAutenticação"
+                "text": "Serviço de\nAutenticação\nSquare ENIX"
               },
               "body": {
                 "stroke": "#333333",
@@ -1027,6 +1401,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 16,
             "ports": {
               "groups": {
                 "top": {
@@ -1110,10 +1485,9 @@
               ]
             },
             "id": "09ce8ec0-af7d-4055-9c16-19a7dd7ce5e1",
-            "zIndex": 16,
             "data": {
               "type": "tm.Process",
-              "name": "Serviço de\nAutenticação",
+              "name": "Serviço de\nAutenticação\nSquare ENIX",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1128,16 +1502,16 @@
           },
           {
             "position": {
-              "x": 776.25,
-              "y": 166
+              "x": 1210,
+              "y": 170
             },
             "size": {
-              "width": 110,
-              "height": 110
+              "width": 130,
+              "height": 120
             },
             "attrs": {
               "text": {
-                "text": "Servidores de\nJogo"
+                "text": "Servidores \nFinal Fantasy XIV"
               },
               "body": {
                 "stroke": "#333333",
@@ -1147,6 +1521,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 17,
             "ports": {
               "groups": {
                 "top": {
@@ -1230,10 +1605,9 @@
               ]
             },
             "id": "cbe7ddf7-a83a-4021-b4b2-1c0baa06177a",
-            "zIndex": 17,
             "data": {
               "type": "tm.Process",
-              "name": "Servidores de\nJogo",
+              "name": "Servidores \nFinal Fantasy XIV",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1248,14 +1622,17 @@
           },
           {
             "position": {
-              "x": 990,
+              "x": 1500,
               "y": 200
             },
             "size": {
-              "width": 120,
+              "width": 110,
               "height": 60
             },
             "attrs": {
+              "text": {
+                "text": "Mog Station"
+              },
               "topLine": {
                 "strokeWidth": 1.5,
                 "strokeDasharray": null
@@ -1267,6 +1644,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 18,
             "ports": {
               "groups": {
                 "top": {
@@ -1350,10 +1728,412 @@
               ]
             },
             "id": "865124d8-14e7-41a0-87b2-80d7c1e14e7e",
-            "zIndex": 18,
             "data": {
               "type": "tm.Store",
-              "name": "Store",
+              "name": "Mog Station",
+              "description": "Nome de Personagem, Servidor, Inventário, Progressão, etc.",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": true,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 596.25,
+              "y": 355
+            },
+            "size": {
+              "width": 160,
+              "height": 70
+            },
+            "attrs": {
+              "text": {
+                "text": "Final Fantasy IXV"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "0b1a4079-d602-4144-871d-790b6869af70"
+                },
+                {
+                  "group": "right",
+                  "id": "b01a8a67-d75a-4e7a-a4ca-1d65ad300aeb"
+                },
+                {
+                  "group": "bottom",
+                  "id": "33955d2c-0709-4f01-b7e5-559dd86bf235"
+                },
+                {
+                  "group": "left",
+                  "id": "69b7faa4-de7a-4b23-9025-b302f6a50f90"
+                }
+              ]
+            },
+            "id": "75509df3-29be-4da4-a15b-25c840ab9645",
+            "zIndex": 20,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Final Fantasy IXV",
+              "description": "",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            },
+            "children": []
+          },
+          {
+            "position": {
+              "x": 70,
+              "y": 41
+            },
+            "size": {
+              "width": 120,
+              "height": 90
+            },
+            "attrs": {
+              "text": {
+                "text": "Steam"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "7b7fc9e3-8e59-496c-a548-cd37f1e5068d"
+                },
+                {
+                  "group": "right",
+                  "id": "62f7ad58-e0fc-4bf3-9666-d188dacc4c72"
+                },
+                {
+                  "group": "bottom",
+                  "id": "129df40d-2bf9-4321-89bd-403d12106893"
+                },
+                {
+                  "group": "left",
+                  "id": "21bcbd9e-cafa-46ec-b7c2-95c658c1c822"
+                }
+              ]
+            },
+            "id": "f4bddc25-880a-4d33-a7ae-62df3ae5a661",
+            "zIndex": 21,
+            "data": {
+              "type": "tm.Process",
+              "name": "Steam",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": true,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 22,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Servidor do jogo",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [
+                "9e14ff99-3fba-422c-97a5-d53c77f9ef50",
+                "65d0d664-1271-4383-8680-8b228e5a9a4a"
+              ],
+              "containedElements": [
+                "09ce8ec0-af7d-4055-9c16-19a7dd7ce5e1",
+                "14aa4677-be3b-4d15-8c1e-23a35ae6c589",
+                "805eabeb-4498-47c8-83ca-a88399d6ba69"
+              ]
+            },
+            "labels": [
+              "Servidor do jogo"
+            ],
+            "id": "bb6640ad-6a31-49d2-86d7-7f9e4d7fee79",
+            "source": {
+              "x": 520,
+              "y": 40
+            },
+            "target": {
+              "x": 1290,
+              "y": 330
+            },
+            "vertices": [
+              {
+                "x": 720,
+                "y": 300
+              }
+            ]
+          },
+          {
+            "position": {
+              "x": 970,
+              "y": 56
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Log de Acesso"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "f993ae1e-011f-41a9-b25a-28ab1369cd77"
+                },
+                {
+                  "group": "right",
+                  "id": "6317a2b1-14f8-45a7-bca7-54613343d194"
+                },
+                {
+                  "group": "bottom",
+                  "id": "d4639bc6-fac9-4ec7-8f65-326029a10024"
+                },
+                {
+                  "group": "left",
+                  "id": "e12c60ac-71aa-4fd8-8e4a-8b5235c03c80"
+                }
+              ]
+            },
+            "id": "14aa4677-be3b-4d15-8c1e-23a35ae6c589",
+            "zIndex": 23,
+            "data": {
+              "type": "tm.Store",
+              "name": "Log de Acesso",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1363,6 +2143,131 @@
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
+              "storesInventory": false,
+              "threats": []
+            },
+            "children": []
+          },
+          {
+            "position": {
+              "x": 830,
+              "y": 200
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Dados de Usuarios"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "f993ae1e-011f-41a9-b25a-28ab1369cd77"
+                },
+                {
+                  "group": "right",
+                  "id": "6317a2b1-14f8-45a7-bca7-54613343d194"
+                },
+                {
+                  "group": "bottom",
+                  "id": "d4639bc6-fac9-4ec7-8f65-326029a10024"
+                },
+                {
+                  "group": "left",
+                  "id": "e12c60ac-71aa-4fd8-8e4a-8b5235c03c80"
+                }
+              ]
+            },
+            "id": "805eabeb-4498-47c8-83ca-a88399d6ba69",
+            "zIndex": 24,
+            "data": {
+              "type": "tm.Store",
+              "name": "Dados de Usuarios",
+              "description": "Login, Senha, Email, Status de Assinatura, Método de Pagamento, etc",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": true,
+              "isSigned": true,
+              "storesCredentials": true,
               "storesInventory": false,
               "threats": []
             }
